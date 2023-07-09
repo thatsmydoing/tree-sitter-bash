@@ -46,6 +46,10 @@
         "named": true
       },
       {
+        "type": "arithmetic_expansion",
+        "named": true
+      },
+      {
         "type": "command_substitution",
         "named": true
       },
@@ -152,6 +156,21 @@
         "named": true
       }
     ]
+  },
+  {
+    "type": "arithmetic_expansion",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "_expression",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "array",
@@ -1359,6 +1378,10 @@
   },
   {
     "type": "$(",
+    "named": false
+  },
+  {
+    "type": "$((",
     "named": false
   },
   {

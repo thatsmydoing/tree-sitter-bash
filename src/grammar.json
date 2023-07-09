@@ -1039,6 +1039,14 @@
           "type": "CHOICE",
           "members": [
             {
+              "type": "PREC",
+              "value": -1,
+              "content": {
+                "type": "SYMBOL",
+                "name": "variable_assignment"
+              }
+            },
+            {
               "type": "SYMBOL",
               "name": "command"
             },

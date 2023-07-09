@@ -435,6 +435,7 @@ module.exports = grammar({
       $.ansi_c_string,
       $.expansion,
       $.simple_expansion,
+      $.arithmetic_expansion,
       $.command_substitution,
       $.process_substitution
     ),
@@ -523,6 +524,12 @@ module.exports = grammar({
         ),
       )),
       '}'
+    ),
+
+    arithmetic_expansion: $ => seq(
+      '$((',
+      $._expression,
+      '))'
     ),
 
     command_substitution: $ => choice(

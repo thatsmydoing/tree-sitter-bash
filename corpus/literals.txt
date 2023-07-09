@@ -175,6 +175,22 @@ grep ^${var}$
   (concatenation (word) (expansion (variable_name)))))
 
 =============================
+Arithmetic expansions
+=============================
+
+echo $(((5 + 2) + 3))
+
+---
+
+(program
+  (command
+    (command_name (word))
+    (arithmetic_expansion
+      (binary_expression
+        (parenthesized_expression (binary_expression (word) (word)))
+        (word)))))
+
+=============================
 Command substitutions
 =============================
 
